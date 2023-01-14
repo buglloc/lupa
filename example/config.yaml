@@ -1,0 +1,13 @@
+debug: true
+allow_registration: false
+ssh:
+  addr: ":2022"
+  host_keys:
+    - "ssh_host_ed25519_key"
+db:
+  store_path: "./db"
+users:
+  buglloc:
+    role: admin
+    sha256_keys:
+      - "SHA256:C0Q14mSJLVITEyGsP6QLE1Z/GfTwEq1mLzVemnVch0E"
