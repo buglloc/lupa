@@ -88,7 +88,7 @@ func (c *Channel) ProcessRequest(fn func(string, interface{}) (interface{}, erro
 	}()
 
 	if err != nil {
-		_ = c.Close()
+		_ = c.closeLocked()
 	}
 	return err
 }
@@ -103,7 +103,7 @@ func (c *Channel) Call(typ string, req interface{}) (reply interface{}, err erro
 	}
 	buf, err := c.callRawLocked(ssh.Marshal(callMsg))
 	if err != nil {
-		_ = c.Close()
+		_ = c.closeLocked()
 		return nil, err
 	}
 
@@ -123,6 +123,10 @@ func (c *Channel) Close() error {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 
+	return c.closeLocked()
+}
+
+func (c *Channel) closeLocked() error {
 	c.closed = true
 	return c.conn.Close()
 }
