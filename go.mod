@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/gofrs/uuid v4.3.1+incompatible
-	github.com/rs/zerolog v1.28.0
+	github.com/rs/zerolog v1.29.0
 	github.com/spf13/cobra v1.6.1
 	go.uber.org/automaxprocs v1.5.1
 	golang.org/x/crypto v0.5.0
