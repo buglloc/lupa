@@ -3,7 +3,7 @@ module github.com/buglloc/lupa
 go 1.19
 
 require (
-	github.com/gofrs/uuid v4.3.1+incompatible
+	github.com/gofrs/uuid v4.4.0+incompatible
 	github.com/rs/zerolog v1.29.0
 	github.com/spf13/cobra v1.6.1
 	go.uber.org/automaxprocs v1.5.1
