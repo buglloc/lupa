@@ -6,7 +6,7 @@ require (
 	github.com/gofrs/uuid v4.4.0+incompatible
 	github.com/rs/zerolog v1.29.0
 	github.com/spf13/cobra v1.7.0
-	go.uber.org/automaxprocs v1.5.1
+	go.uber.org/automaxprocs v1.5.2
 	golang.org/x/crypto v0.7.0
 	gopkg.in/yaml.v3 v3.0.1
 )
